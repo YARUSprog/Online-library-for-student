@@ -1,0 +1,300 @@
+/* CSS Document */
+*{
+    padding:0; margin:0;
+}	
+img{border:none;
+}	
+.clr{
+    clear:both;
+}
+html{}
+a:hover{text-decoration:none;}
+body{
+    background:#f2f2f2;
+}
+.karkas{
+    width:1000px; margin: 5px auto; background:#fff; 
+}
+.head{
+    overflow:hidden; border-bottom:3px solid #d8d7d7;
+}
+.head img{
+    float:left; margin:35px 0 20px 30px;
+}	
+.head p{
+    font:12px Tahoma; float:right; color:#356581; margin:15px 30px 0 0;
+}
+.head p a{
+    color:#356581;
+}	
+.content-main{
+    width:100%; overflow:hidden;
+}	
+.leftBar{
+    float:left; width:200px; padding:20px 0 30px 30px;
+}
+.nav-left{
+    list-style:none; font:14px "Trebuchet MS"; color:#283964;
+}	
+.nav-left li{	
+    margin:10px 0 0 0;
+}
+.nav-left li a{
+    color:#283964; font-weight:bold;	
+}
+a.nav-activ{
+    color: #C80A0A !important; text-decoration: none;
+}	
+
+.nav-left ul{
+    list-style:none; margin:0 0 10px 15px; font-size:13px;
+}
+.nav-left ul li{
+    margin:5px 0 0 0;
+}
+
+.content{
+    padding:20px 0 30px 0; margin:0 30px 0 230px; position:relative;
+}
+.content h2{
+    font:18px "Trebuchet MS"; color:#545555; margin:0 0 20px 0;
+}	
+.tabl{
+    background:#f7f7f7; width:100%; font:14px Tahoma; color:#555555; margin:0 0 20px 0;
+}
+a.edit{
+    color:#495d90;
+}
+a.del{
+    color:#C80A0A;
+}
+.tabl th{
+    padding:5px 0;
+}		
+.tabl td{
+    background:#fff; text-align:center; padding:7px 10px;
+}
+.number{
+    width:45px;
+}
+.str_name{
+    width: 0;
+
+}
+.str_sort{
+    width:100px;
+}
+.str_action{
+    width:180px;
+}
+.name_page{
+    //text-align:left!important;
+}	
+.add_some{
+    margin:0 0 20px 0; display:block;
+}	
+.add_edit_page{
+    font: 14px Tahoma; color:#666666; width:100%; border:0;
+}
+.add_edit_page td{
+    padding:8px 10px 8px 0;
+}
+.head-text{
+    border:1px solid #666666; height:20px; width:320px; padding:0 10px; font:12px Verdana, Arial, Helvetica, sans-serif; color:#666;
+}
+.num-text{
+    border:1px solid #666666; height:20px; width:30px; padding:0 10px; font:12px Verdana, Arial, Helvetica, sans-serif; color:#666; text-align:center;
+}	
+.date-text{
+    border:1px solid #666666; height:20px; width:75px; padding:0 10px; font:12px Verdana, Arial, Helvetica, sans-serif; color:#666; 
+}	
+.add-edit-txt{
+    width:155px;
+}
+.full-text{
+    border:1px solid #666666; height:400px; width:100%; padding:0 0; font:12px Verdana, Arial, Helvetica, sans-serif; color:#666;
+}
+.anons-text{
+    border:1px solid #666666; height:200px; width:100%; padding:0 0; font:12px Verdana, Arial, Helvetica, sans-serif; color:#666;
+}		
+.inf-up{
+    background:#ccc url(images/bg-str-down.jpg) 13px 9px no-repeat; font:bold 16px "Trebuchet MS"; color:#283964; padding:3px 0 3px 35px; margin:0 0 20px 0; overflow:hidden;
+}
+.inf-down{
+    background:#ccc url(images/bg-str-up.jpg) 13px 9px no-repeat;  padding:3px 0 3px 35px; margin:0 0 20px 0; overflow:hidden;
+}
+.inf-down h3{
+    float:left; font:bold 16px "Trebuchet MS"; color:#283964;
+}
+.inf span{
+    font-weight:normal; font-size:14px;
+}
+.inf-link{
+    float:right; margin:-2px 20px 0 0;
+}
+.select-inf{
+    border: 1px solid #666666; color: #666666; font: 12px Verdana,Arial,Helvetica,sans-serif; height: 20px; padding:0 0 0 10px;
+    width: 200px;
+}
+.inf-page{
+    margin:20px 0 0 40px;
+}
+.inf-tabl{
+    background:#f7f7f7; width:100%; font:13px Tahoma; color:#555555; margin:0 0 20px 0;
+}
+.inf-tabl th{
+    padding:3px 0;
+}		
+.inf-tabl td{
+    background:#fff; text-align:center; padding:4px 10px;
+}
+
+.add_kategory{
+    margin:0 0 20px 0; position:absolute; top:20px; right:-5px;
+}
+.crosh{ 
+    overflow:hidden; margin:0 0 30px 0;
+} 
+.crosh-left{
+    float:left; font:13px "Trebuchet MS", Arial, Helvetica, sans-serif; color:#545555;
+}
+.crosh-left a{
+    color:#283964;
+}
+.crosh-right{
+    float:right; font:13px "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+.tabl-kat{
+    background:#f7f7f7; width:100%; font:14px Tahoma; color:#555555; margin:0 0 20px 0;
+}		
+.tabl-kat td{
+    background:#fff; text-align:center; padding:20px 10px 25px 10px;
+}		
+.tabl-kat td img{
+    margin:0 0 20px 0;
+}
+
+.pager{
+    list-style:none; overflow:hidden;
+}
+.pager li{
+    float:left;
+}
+.pager li a{
+    display:block; border:1px solid #ccc; padding: 3px 10px 5px; color:#3a60bf; font:13px Tahoma; margin:0 15px 0 0;
+}
+.pager li a.now{
+    display:block; border:1px solid #ccc; padding: 3px 10px 5px; background:#3a60bf; color:#fff; font:13px Tahoma;
+}
+
+.error{
+    margin-top:5px;
+    border:1px solid #765858;
+    background:#ffeded !important;
+    color:#7f5354 !important;
+    padding:3px;
+}
+.success{
+    margin-top:5px;
+    border:1px solid #adc092;
+    background:#f0faf1 !important;
+    color:#58715e !important;
+    padding:3px;
+}
+
+//для комбобокса з можливістю вводу в текстове поле
+.select-editable { position:relative; background-color:white; border:solid grey 1px;  width:340px; height:18px; }
+.select-editable select { position:absolute; top:0px; left:0px; font-size:14px; border:none; width:340px; margin:0; }
+.select-editable input { position:absolute; top:0px; left:0px; width:320px; padding:1px; font-size:12px; border:none; }
+.select-editable select:focus, .select-editable input:focus { outline:none; }
+
+header{
+    height: 150px;
+    border-radius: 5px;
+    background: #ccccff;
+    width: 1000px;
+    margin: 0 auto;
+}
+#top-image{
+    height: 100px;
+    width: 100px;
+    //top: 20px;
+    background: #6699ff;
+    margin: 25px 0 0 5%;
+    //margin:25px 0 0 30px;
+    float: left;
+
+
+    //position: absolute;
+    //left: 5%;
+    border-radius: 5px;
+}
+#user-panel{
+    position: relative;
+    top: 60px;
+    //right: 20px;
+    //left: 300px;
+
+    //margin-left: 300px;
+    margin: 0 auto;
+    //margin-right: 350px;
+
+    width: 280px;
+    padding: 10px;
+    background: #9999ff;
+    border-radius: 5px;
+}
+#user-panel img{
+    width: 25px;
+    height: 25px;
+}
+
+footer{
+    height: 80px;
+    background: #6184aa;
+    border-radius: 0px 0px 5px 5px;
+    vertical-align: central;
+    width: 1000px;
+    margin: 0 auto;
+}
+footer div{
+    padding-top: 35px;
+    font-weight: bold;
+    padding-left: 50px;
+    width: 900px;
+    
+}
+footer span {
+    margin-right: 15px;    
+}
+
+.footer-contact {
+    margin-left: 350px;
+}
+
+
+.menu {
+    margin: 5px 0;
+    background: linear-gradient(to bottom, #fff, #f1f2f2); /* Градиент */
+    border: 1px solid #999; /* Параметры рамки */
+    padding: 0 5px; /* Поля */
+    font: 14px Arial, sans-serif; /* Параметры шрифта */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Тень под меню */
+}
+.menu li {
+    display: inline-block; /* Выстраиваем по горизонтали */
+    //border-right: 1px solid #fff; /* Белая линия справа */
+}
+.menu a {
+    text-decoration: none; /* Убираем подчёркивание */
+    color: #4c4c4c; /* Цвет ссылок */
+    display: block; /* Блочные ссылки */
+    padding: 10px 15px; /* Поля */
+    //border-right: 1px solid #d8d8d8; /* Серая линия справа */
+}
+
+.menu-elem {
+    border-right: 1px solid #d8d8d8; /* Серая линия справа */
+}
+
+.menu a:hover { color: #006cc9; }

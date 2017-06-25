@@ -1,0 +1,86 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<div class="content">
+    <h2 id="head_title">Cписок статей</h2>
+    <c:if test="${info ne null}">
+        <div class="success">${info}</div>
+    </c:if>    
+    <a href="admin_page?content_id=add_article"><img class="add_some" src="images/add_page.jpg" alt="добавить страницу" /></a>
+    <table class="tabl" cellspacing="1">
+        <tr>
+            <th class="number">№</th>
+            <th class="str_name">Название статьи</th>                            
+            <th class="str_action">Действие</th>
+        </tr>
+        <c:forEach var="article" items="${articles}">
+            <article>
+                <tr>
+                    <td>${article.id}</td>
+                    <td class="name_page">${article.title}</td>                            
+                    <!--<td><a href="admin_page?command=load_article&article_id=${article.id}&content_id=edit_article" class="edit">изменить</a>&nbsp; | &nbsp;<a href="admin_page?command=delete_article&article_id=${article.id}&content_id=admin_article-list" class="del">удалить</a></td>-->
+                    <td><a href="admin_page?command=load_article&article_id=${article.id}&content_id=edit_article" class="edit">изменить</a>&nbsp; | &nbsp;<button id="delArticleBtn" onclick="deleteArticle('${article.id}')"  class="del">удалить</button></td>
+                    <!--<td><a href="admin_page?command=load_article&article_id=${article.id}&content_id=edit_article" class="edit">изменить</a>&nbsp; | &nbsp;<a href="admin_page?command=delete_article&article_id=${article.id}&content_id=admin_article-list" class="del">удалить</a></td>-->
+                </tr>
+            </article>
+        </c:forEach>        
+    </table>
+    <a href="admin_page?content_id=add_article"><img class="add_some" src="images/add_page.jpg" alt="добавить страницу" /></a>
+</div> <!-- .content -->
+<script>
+    function deleteArticle(id) {        
+        var url = "/articles/" + id;
+        var form = null;       
+        $.ajax({
+            url: "/articles/" + id,
+            type: "DELETE",
+            data: ""
+        }).complete(function () {            
+            location.reload();
+        });
+    }
+
+    /*$("#delArticleBtn").on("click", function (e) {
+     $("#head_title").html("TESSSSSSSSSSSSSST");        
+     var url = "/articles/" + id;
+     var form;
+     $.ajax({
+     url: url,
+     type: "DELETE",
+     data: $(form).serialize()
+     }).complete(function () {
+     //$(window).trigger('hashchange');
+     });
+     }
+     );*/
+
+    function send(form, url, type) {
+        var token = $("meta[name='_csrf']").attr("content");
+        var header = $("meta[name='_csrf_header']").attr("content");
+        $(".progress").addClass("progress-active");
+        var xhr = $.ajax({
+            url: url,
+            type: type,
+            data: $(form).serialize(),
+            beforeSend: function (xhr) {
+                xhr.setRequestHeader(header, token);
+            },
+            statusCode: {
+                200: function (data) {
+                    Materialize.toast(xhr.getResponseHeader("successMessage"), 10000);
+                },
+                201: function (data) {
+                    Materialize.toast(xhr.getResponseHeader("successMessage"), 10000);
+                },
+                417: function (data) {
+                    Materialize.toast(xhr.getResponseHeader("validationMessage"), 10000);
+                },
+                500: function (data) {
+                    Materialize.toast(xhr.getResponseHeader("errorMessage"), 10000, 'red');
+                }
+            }
+        }).complete(function () {
+            $(".progress").removeClass("progress-active");
+        });
+        return xhr;
+    }
+</script>

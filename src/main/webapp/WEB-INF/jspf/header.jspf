@@ -1,0 +1,16 @@
+<%-- any content can be specified here e.g.: --%>
+<%@ page pageEncoding="UTF-8" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
+<header>
+    <a href="/"><img alt="Логотип" id="top-image" src="<s:url value="/images/IPZ_logo.jpg"/>"></a>
+    <div id="user-panel">
+        <!--<a href="#"><img alt="Иконка юзера" scr=""/></a>
+        <a href="javascript:void(0);">[Панель для юзера]</a>-->
+        <ul class="menu">
+            <li class="menu-elem"><a href="<s:url value="/index"/>">Головна</a></li>
+            <li class="menu-elem"><a href="<s:url value="/contacts"/>">Контакти</a></li> 
+            <li><a href="<s:url value="/admin_page"/>">Кабінет</a></li>
+        </ul>
+    </div>
+</header>
